@@ -1,9 +1,3 @@
-## Folder Navigation Quick Guide
-1. UI = Reshma, Rutha
-2. Scripting = Pallavi, Nithin
-3. Domain = Nikitha
-
-
 ## Git Quick Guide
  ###  Steps to follow for first time download
 1. git clone <git_url> 
