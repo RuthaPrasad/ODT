@@ -1,0 +1,33 @@
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+    cursor: move;
+}
+.furniture
+{
+	top: 10px;
+	padding: 1em;
+	margin: 2px;
+	float: none;
+	background-color: cyan;
+	width: 70px;
+	height: 70px;
+	align-items: center;
+	float: right;
+	z-index: 2;
+}
+.upper-canvas
+{
+	position: relative;
+	top: 200px;
+	left: 100px;
+	float: right;
+	z-index: 0;
+	border: 2px solid;
+	width: 500px;
+	height: 500px;
+}
