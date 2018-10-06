@@ -1,0 +1,21 @@
+body{background-image:url("img/bg4.jpg");background-size:100%;background-repeat:no-repeat;}
+img{transition:all .8s;border:5px solid black;position:absolute;width:500px;height:450px;}
+img.about{top:60px;left:0px;position:absolute;z-index:1;-webkit-transform:rotateY(50deg);}
+img.tutorial{top:60px;left:200px;position:absolute;z-index:3;-webkit-transform:rotateY(50deg);}
+img.feedback{top:60px;left:100px;position:absolute;z-index:2;-webkit-transform:rotateY(50deg);}
+img.LD{top:60px;left:400px;position:absolute;z-index:5;-webkit-transform:rotateY(50deg);}
+img.EE{top:60px;left:300px;position:absolute;z-index:4;-webkit-transform:rotateY(50deg);}
+img.scribble{top:60px;left:600px;position:absolute;z-index:7;-webkit-transform:rotateY(50deg);}
+img.flowchart{top:60px;left:500px;position:absolute;z-index:6;-webkit-transform:rotateY(50deg);}
+img:hover{border:5px solid snow;width:450px;height:400px;position:absolute;z-index:9;-webkit-transform:rotateY(0deg);}
+
+div.footer{padding:5px;background-color:snow;color:black;position:fixed;bottom:5px;width:99.2%;left:0px;height:22px;text-align:right;}
+#i{float:left;position:relative;height:100%;width:60%;-webkit-perspective:2000px;}
+
+img.logo{border:5px solid white;position:absolute;width:150px;height:150px;float:right;right:50px;transition:all 2s;top:20px}
+img.logo:hover{-webkit-transform: rotate(360deg);}	
+
+#sidebar{border:5px solid white;position:absolute;float:right;right:50px;width:150px;height:300px;top:200px}
+img.name{border:5px;width:100%;height:100%;}
+#sidebar:hover > #description{transition:all 1s;opacity:1;}
+#description{position:absolute;opacity:0;text-align:center;width:100%;height:100%;background-color:white;font-size:95%;font-family:Courier;color:black;}

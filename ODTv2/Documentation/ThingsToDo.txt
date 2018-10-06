@@ -1,0 +1,56 @@
+Project title - Online drawing tool
+
+Build uniform UI for the tool - 
+    - UI for User
+        - pick the domain 
+            - objects bar (drag and drop to draw)
+                - properties of the object (right click, eg: set resisitance value)
+            - toolbar
+                - save, load, draw lines, (uniform options = resize, color, etc .. like in paint)
+            - additional functionality (do something with the diagram, eg: run circuit)
+
+    - config files for expert 
+        - path to input
+             images
+                - csv(domain/expert, images)
+                - csv(user, images)  
+        - path to object properties 
+            - file which states the properties of each obj explicitly 
+            - dict(building-block : right-click options)
+            - called by functions of the interface
+        - path to provide basic functionality
+            - how to save the diagram 
+            - define the formal method
+            - how to reload
+        - path to additional functionalities
+            - evaluate circuit
+            - do anything the expert feels is required
+        - path to output images(objects)
+             images
+                - csv(domain/expert, images)
+                - csv(user, images) 
+             data structure
+                - json(domain/expert,)
+                - json(user, images)
+
+Problem statement: 
+
+To design a generic graphic drawing tool that supports construction, analysis and evaluation of technical diagrams. 
+To allow construction of diagrams from predefined building-blocks.
+To allow analysis and evaluation of diagrams from predefined functionalities. 
+
+
+
+Parameters
+    - obj id
+    - class - type
+    - x,y coordinates of all corners of image wrt canvas
+    - size
+    - rotation angle
+    - properties of image, set by user - like resistance value, color (depends on each obj)
+    - object label (set by user, can be a property of image)
+    - depth (incase of overlaps)
+    - any additional properties (added for sake of convenience or implementation)
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+<title>Tutorial </title>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<script>
+function home()
+{
+responsiveVoice.speak("Home button. takes you back to the homepage");
+}
+function line()
+{
+responsiveVoice.speak("line button.draw lines on left click by moving the mouse ");
+}
+function eraser()
+{
+responsiveVoice.speak("eraser button.activates erasing.To erase lines that are drawn,just use left click and move the mouse.To delete element, click on the move button amd double click on the element you want to delete.");
+}
+function move()
+{
+responsiveVoice.speak("Move button.helps you drag and drop images on the canvas");
+}
+function o()
+{
+responsiveVoice.speak("New button.opens a new fresh page. No data is saved");
+}
+function linethickness()
+{
+responsiveVoice.speak("Line Thickness button.left click and enter the radius in pixels to change the line thickness");
+}
+function linecolor()
+{
+responsiveVoice.speak("Line color button.left click and choose a color from the palette,to change the line color");
+}
+function text()
+{
+responsiveVoice.speak("Text button.right click on the canvas to create a text box.");
+}
+function save()
+{
+responsiveVoice.speak("save button. saves your final drawing.");
+}
+function help()
+{
+responsiveVoice.speak("Help button. Get tips on how to make your experience better");
+}
+function signout()
+{
+responsiveVoice.speak("sign out button.logs out of your account and takes you back to the homepage");
+}
+function imgs()
+{
+responsiveVoice.speak("Click on any image. It is added inside the canvas.");
+}
+function canvas()
+{
+responsiveVoice.speak("The canvas area. You can draw,drag and drop images here.Add text and more.");
+}
+function tell()
+{
+alert("Click on any area of the screenshot to know how to use it");
+}
+
+//ltrb rect coords
+</script>
+<style>html{overflow:hidden;}
+</style>
+</head>
+<body style="background-color:black;" onload="tell()">
+<img id="image" src="img/Screenshot.png" usemap="#tutmap" alt="Tutorial" style="width:100%;height:auto;">
+<map name="tutmap">
+
+
+<area shape="rect" coords="0,0,118,50" alt="Home" onclick="home();" title="home">
+<area shape="rect" coords="118,0,224,50" alt="Line" onclick="line();" title="line">
+<area shape="rect" coords=224,0,324,50" alt="Eraser" onclick="eraser();" title="eraser">
+<area shape="rect" coords=324,0,424,50" alt="Move" onclick="move();" title="move">
+<area shape="rect" coords="424,0,524,50" alt="New" onclick="o();" title="new">
+<area shape="rect" coords="524,0,624,50" alt="Line Thickness" onclick="linethickness();" title="thickness">
+<area shape="rect" coords="624,0,724,50" alt="Line Color" onclick="linecolor();" title="color">
+<area shape="rect" coords="724,0,824,50" alt="Text" onclick="text();" title="text">
+<area shape="rect" coords="824,0,924,50" alt="Save" onclick="save();" title="save">
+<area shape="rect" coords="924,0,1024,50" alt="Help" onclick="help();" title="help">
+<area shape="rect" coords="1024,0,1260,50" alt="Sign Out" onclick="signout();" title="signout">
+<area shape="rect" coords="0,60,190,570" alt="Images" onclick="imgs();" title="image panel">
+<area shape="rect" coords="190,60,1260,570" alt="Canvas" onclick="canvas();" title="canvas">
+</map>
+</body>
+</html>

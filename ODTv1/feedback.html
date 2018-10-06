@@ -1,0 +1,144 @@
+<html>
+<head>
+<style>
+form {
+	float:left;
+	border: 3px solid #f1f1f1;
+	margin:5px;
+	width:80%;
+}
+
+img.logo{
+	border:5px solid white;
+	position:absolute;
+	width:150px;
+	height:150px;
+	float:right;
+	right:50px;
+	transition:all 2s;
+	top:20px;	
+	position:absolute;
+}
+img.logo:hover{-webkit-transform: rotate(360deg);}	
+
+
+img.name{
+	border:5px;
+	width:100%;
+	height:100%;
+	float:right;
+	right:50px;
+	width:150px;
+	height:300px;
+	top:200px;
+	position:absolute;
+}
+body	{
+	background-image:url("img/bg2.jpg");
+	background-size:100%;
+	background-repeat:no repeat;
+}
+label{
+font-size:15px;
+font-family:Verdana;
+}
+input[type=text],input[type=password],input[type=number]
+{
+	color:white;
+	font-size:20px;
+	width:100%;
+	margin: 20px;
+	box-sizing: border-box;
+	background:transparent;
+	border:none;
+	border-bottom:2px solid lightblue
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin:10px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+float:right;
+font-size:15px;}
+
+.cancelbtn {
+    width:100px;
+    padding:14px;
+    margin:10px;
+    background-color: #f44336;
+float:right;
+font-size:15px;}
+
+.imgcontainer {
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+img.avatar {
+    float:right;
+width: 20%;
+    padding:20px;
+border-radius:100%;
+}
+
+.container {
+    left:100px;
+    padding: 10px;
+    width:70%;
+    margin:20px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 10px;
+}
+
+</style>
+</head>
+
+
+<body>
+<form method="post" action="email.php">
+  <div class="imgcontainer">
+  <a href="Homepage.html"><img src="img/feedback.jpg" alt="Feedback" class="avatar"></a>
+  </div>
+
+<h1 style="font-size:50px;font-family:Courier;text-align:center;color:snow;"><i>Tell Us What You Think</i></h1>
+<div class="container">
+
+<label style="color:white;"><b>Name *</b>
+    <input type="text" placeholder="Enter FullName" name="fname" required><br>
+<label style="color:white;"><b>Contact Number *</b></label>
+    <input type="text" placeholder="+91" name="num" required><br>
+<label style="color:white;"><b>Email Id *</b></label>
+    <input type="text" placeholder="Enter email id" name="email" required><br>
+<label style="color:white;"><b>On a scale of 0-10 what would you rate us? *</b></label>
+    <input type="text" placeholder="Enter rating (0-10)" name="rating" required><br>
+<label style="color:white;"><b>What did you like the most?</b></label>
+    <input type="text" placeholder="Enter what you thought was the best thing about this website." name="best"><br>
+<label style="color:white;"><b>Did you face any problems?</b></label>
+    <input type="text" placeholder="If yes what kind of problems did you face?" name="problems"><br>
+<label style="color:white;"><b>Comments and Suggestions *</b></label>
+    <input type="text" maxlength="1000" placeholder="Anything on your mind that you'd like to share?" name="comments" required><br>
+</div>    
+<button type="Submit">Send Feedback</button>
+    
+<a href="Homepage.html"><button type="button" class="cancelbtn">Cancel</button></a>
+    
+ 
+
+
+</form>
+<img class = "logo" src = "img/logoo.png" >
+
+<div id="sidebar">
+	<img class = "name" src = "img/name.png" >
+	
+</div>
+
+</body>
+
+</html>

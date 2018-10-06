@@ -1,0 +1,37 @@
+Interface documentation
+
+Each Component has following properties:
+    id - unique id for each component
+    domain - domain it belongs to
+    value - value associated with the component if any
+    type - type of component eg:type of gate, state or transition
+    x_coordinate - decide if one coordinate or multiple coordinates
+    y_coordinate 
+    label - as specified by user
+    size
+    rotation
+    color
+    depth - incase of overlapping images
+
+Util functions - independent of domain
+    save(data, filename, path) 
+        - returns nothing
+        - saves both components and connectivity
+    reload(filename, path) 
+        - returns components, connectivity
+        - reloads both components and connectivity 
+
+Domain specific implementation
+    - init(components, connectivity)
+        - creates the component objects etc
+    - set_connectivity
+        - creates domain specific connectivity structure
+
+Additional functions - LD
+    - compute at point specified
+    - take inputs at specified points
+    - simplify
+
+Additional functions - TOC
+    - if string belongs to language
+    - state sequence

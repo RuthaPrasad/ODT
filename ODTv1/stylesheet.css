@@ -1,0 +1,30 @@
+
+body{background-image:url("img/bg2.jpg");background-size:100%;background-repeat:no-repeat;}
+div.footer{padding-bottom:1%;background-color:black;color:white;position:fixed;bottom:.5%;width:100%;height:5%;text-align:right;font-family:Courier;}
+div.details{text-align:left;width:80%;}
+div.draw{margin-top:0.4%;width:100%;height:530px;}
+	div.toolbar{margin:0px;border:2px solid white;float:left;height:100%;width:14%;}
+	#canvasNgrid{position:relative;margin:0px;border:-1px solid white;float:right;height:100%;width:85%;background-color:white;}	
+img.dropped{border:none;width:160px;height:80px;}
+
+button.topnav{color:white;border:none;display: inline-block;padding:7px 8px;transition: 0.1s;background-color:black;}
+ul.topnav {list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color:black;}
+button.topnav:hover,p:hover{background-color:#33cc33;}
+ul.topnav li{color:white;margin-left:5.5%;margin-left:5.5%;float:left;}
+ul.topnav li a{display: inline-block;color: #f2f2f2;text-align: center;padding: 7px 8px;text-decoration: none;transition: 0.3s;font-size:100%;}
+ul.topnav li a:hover{background-color:#33cc33;}
+
+img.logo{border:5px solid white;position:absolute;width:13%;height:25%;float:right;right:3%;transition:all 2s;top:5%}
+img.logo:hover{-webkit-transform:rotate(360deg);}	
+
+div.sidenav {height: 100%;width: 0;position: fixed;z-index: 1;top: 0;left: 0;
+background-color: #111;overflow-x: hidden;padding-top: 60px;transition: 0.5s;opacity:0.9;}
+ul.sidenavUl li {padding:10px 50px 0px 10px;font-size:20px;color: #818181;}
+div.sidenav a:hover,{text-decoration: none;transition: 0.3s,color: #f1f1f1;}
+.sidenav .closebtn {text-decoration: none;color:white;position: absolute;top: 0;right: 25px;font-size: 36px;margin-left: 50px;}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

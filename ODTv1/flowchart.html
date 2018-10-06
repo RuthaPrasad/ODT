@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>ER Diagrams</title>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="html2canvas.js"></script>
+<script type="text/javascript" src="jquery.plugin.html2canvas.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+input[type=image]{background-color:white;margin:1%;border:5px outset white;width:98%;height:11%;}
+</style></head>
+<body>
+
+
+<form method="POST" enctype="multipart/form-data" action="save.php" id="myForm">
+	<input type="hidden" name="img_val" id="img_val" value="" />
+</form>
+
+
+
+<div class="header">
+<ul class="topnav" id="myTopnav">
+  <li style="margin-left:0px"><a href="Homepage.html" title="Homepage"><i class="fa fa-home w3-large" style="color:white"></i> Home</a></li>
+  <li><button type="button" title="line" class="topnav" onclick="bringCanvasUp()"><i class="fa fa-pencil w3-large" style="color:white"></i></li>
+	<li><button type="button" title="eraser" class="topnav" onclick="erase()"><i class="fa fa-eraser w3-large" aria-hidden="true" style="color:white"></i></li>
+  <li><button type="button" title="select" class="topnav" onclick="bringGridUp()"><i class="fa fa-mouse-pointer w3-large" style="color:white"></i></li>
+ <li><button type="button" title="new" class="topnav"  onclick="newpage()"><i class="fa fa-file-o w3-large" style="color:white"></i></li>
+<li><button type="button" title="lineThickness" class="topnav" onclick="pickThickness()"><i class="fa fa-circle w3-large" style="color:white"></i></li>
+<li><button type="button" title="lineColor" class="topnav"><input id="colorPicker" type="color"></li>
+  <li><button type="button" title="text" class="topnav" onclick="textbox(event)"><i class="fa fa-font w3-large" style="color:white"></i></li>
+<li><button type="button" class="topnav" title="save" onclick="capture()"><i class="fa fa-floppy-o w3-large" style="color:white"></i></li>
+<li><button type="button" class="topnav" title="Help"  onclick="openNav()"><i class="fa fa-question-circle-o w3-large" style="color:white"></i> Help</li>
+<li style="margin-right:0px"><a href="index.html" title="Sign Out">Sign Out <i class="fa fa-power-off w3-large" style="color:white"></i></a></li>
+    
+</ul>
+</div>
+
+<div id="target">
+<div class="draw">
+	<div id="canvasNgrid">
+	<div id="div0" class="grid" style="position:absolute;z-index:1;width:100%;height:100%;"></div>
+	<canvas id="myCanvas" width="1080" height="520" style="position:absolute;z-index:0;cursor:crosshair;"
+ onmousedown="getStart(event)" onmouseup="getStop(event)"></canvas>
+	</div>
+		
+<script type="text/javascript">
+	function capture() {
+		$('#target').html2canvas({
+			onrendered: function (canvas) {
+                //Set hidden field's value to image data (base-64 string)
+				$('#img_val').val(canvas.toDataURL("image/png"));
+                //Submit the form manually
+				document.getElementById("myForm").submit();
+			}
+		});
+	}
+</script>
+
+	<div class="toolbar">
+	<input title="attribute" draggable="true" id="img/attribute.png" type="image" src="img/attribute.png" onclick="createImage(this.id);">
+	<input title="derivedAtrb" draggable="true" id="img/derivedattribute.png" type="image" src="img/derivedattribute.png" onclick="createImage(this.id);">
+	<input title="entity" draggable="true" id="img/entity.png" type="image" src="img/entity.png" onclick="createImage(this.id);">
+	<input title="multiAtrb" draggable="true" id="img/multiattribute.png" type="image" src="img/multiattribute.png" onclick="createImage(this.id);">
+	<input title="relation" draggable="true" id="img/relationship.png" type="image" src="img/relationship.png" onclick="createImage(this.id);">
+	<input title="weakEntity" draggable="true" id="img/weakentity.png" type="image" src="img/weakentity.png" onclick="createImage(this.id);">
+	<input title="weakRel" draggable="true" id="img/weakrelation.png" type="image" src="img/weakrelation.png" onclick="createImage(this.id);">
+	<input title="keyAtrb" draggable="true" id="img/keyattribute.png" type="image" src="img/keyattribute.png" onclick="createImage(this.id);">
+	</div>
+
+</div>
+</div>
+<div class="footer" style="color:white;background-color:black;font-family:Courier;"> Copyright &copy; Nikitha & Rutha 2016 &copy;  </div>	
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <ul class="sidenavUl" type="disc">
+  <li>Want to save your creation? Click on the save button and your file will be saved in your account.</li>
+  <li>Want to open a new page? Click the open/new button to reset to a fresh canvas.</li>
+  <li>Want to change line color? Choose the color picker and create new shades!</li>
+  <li>Click on the buttons in the toolbar to add multiple elements.</li>
+  <li>Double click on an element to delete it.</li>
+  <li>Right click after selecting the text button to create a textbox.</li>
+  <li>Tool is not responding? Refresh the page or check your net speed.Sorry for the inconvenience.</li>
+  <li>Couldn't find the answer you were looking for?Contact us at <i class="fa fa-phone w3-large" style="color: #818181;"></i> 9876543210</li>
+  </ul>
+</div>
+<script type="text/javascript" src="dragNDrop.js"></script>
+
+
+
+</body>
+
+</html>
