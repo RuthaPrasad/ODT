@@ -1,24 +1,16 @@
-## Git Quick Guide
- ###  Steps to follow for first time download
-1. git clone <git_url> 
-    * eg: git clone "https://github.com/RuthaPrasad/ODT.git"
-2. cd <git_clone_folder>
-    * eg: git ODT
-3. git add <filename/folder>
-    * eg: git add . (to push all contents of current directory)
-4. git push
-5. git commit -m <commit message>
-    * eg: git commit -m "pushing new drag and drop code"
+# ODTv2
 
- ### Steps to follow to merge new changes
+## Collaboration repository for ODTv2 
 
-1. cd <previous_folder_where_you_performed_the_git_clone>
-    * eg: git ODT
-2. git pull <git_url> 
-    * eg: git pull "https://github.com/RuthaPrasad/ODT.git"
-3. git add <filename/folder>
-    * eg: git add . (to push all contents of current directory)
-4. git push
-5. git commit -m <commit message>
-    * eg: git commit -m "pushing new drag and drop code"
+### Included folder:
 
+Documentation
+  >design documentation, progress lists, etc
+
+Code
+  >code-base for whole project. Contains subfolders
+  >> UI = HTML, AngJS, CSS, etc
+  
+  >> Scripting = JavaScript, Python Flask
+  
+  >> Domain = Python base
