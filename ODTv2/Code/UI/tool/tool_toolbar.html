@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="toolbarApp">
+
+<head>
+    <title>Logic Gates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        footer {
+            position: fixed;
+            left:0;
+            bottom:0;
+            width:100%;
+            background-color: DarkSlateGrey;
+            color: white;
+            padding: 15px;
+        }
+        button.topnav {
+            color:white;
+            border:none;
+            display: inline-block;
+            padding:7px 8px;
+            transition: 0.1s;
+            background-color:black;
+        }
+        ul.topnav {
+            list-style-type: none;
+            position: fixed;
+            top:0;
+            left:10%;;
+            width:100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color:black;
+        }
+        button.topnav:hover,p:hover {
+            background-color:grey;
+        }
+        ul.topnav li {
+            color:white;
+            margin-left:5.5%;
+            margin-left:5.5%;
+            float:left;
+        }
+        ul.topnav li a {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 7px 8px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size:100%;
+        }
+        ul.topnav li a:hover {
+            background-color:#33cc33;
+
+        }
+    </style>
+</head>
+
+<body ng-controller="MainCtrl as ctrl">
+    <div class="toolbarHeader">
+        <ul class="topnav" id="myTopnav">
+            <li><button type="button" title="Line" class="topnav" ng-click="ctrl.pencilDraw()"><i class="fa fa-pencil w3-large"></i></li>
+            <li><button type="button" title="Eraser" class="topnav" ng-click="ctrl.erase()"><i class="fa fa-eraser w3-large" aria-hidden="true" ></i></li>
+            <li><button type="button" title="Select" class="topnav" ng-click="ctrl.select()"><i class="fa fa-mouse-pointer w3-large"></i></li>
+            <li><button type="button" title="New" class="topnav" ng-click="ctrl.newObj()"><i class="fa fa-file-o w3-large"></i></li>
+            <li><button type="button" title="LineThickness" class="topnav" ng-click="ctrl.circleDraw()"><i class="fa fa-circle w3-large"></i></li>
+            <li><button type="button" title="LineColor" class="topnav" ng-click="ctrl.pickColor()"><input id="colorPicker" type="color"></li>
+            <li><button type="button" title="Text" class="topnav" ng-click="ctrl.resizeFont()"><i class="fa fa-font w3-large"></i></li>
+            <li><button type="button" class="topnav" title="Help" ng-click="ctrl.callHelp()"><i class="fa fa-question-circle-o w3-large"></i> Help</li>
+            <li style="margin-right:0px"><a href="../homepage/index.html" title="Sign Out">Sign Out <i class="fa fa-power-off w3-large"></i></li>
+        </ul>
+    </div>
+
+    <footer class="container-fluid">
+        <p>Footer Text</p>
+    </footer>
+    <script src="angular.min.js"></script>
+    <script>
+        angular.module("toolbarApp",[]).controller("MainCtrl",[function() {
+            var self = this;
+            self.pencilDraw = function() {
+                // TODO:
+                console.log("draw pencil");
+            }
+            self.erase = function() {
+                // TODO:
+                console.log("erase");
+            }
+            self.select = function() {
+                // TODO:
+                console.log("select");
+            }
+            self.newObj = function() {
+                // TODO:
+                console.log("new object");
+            }
+            self.circleDraw = function() {
+                // TODO:
+                console.log("draw circle");
+            }
+            self.pickColor = function() {
+                // TODO:
+                console.log("pick color");
+            }
+            self.resizeFont = function() {
+                // TODO:
+                console.log("resize font");
+            }
+            self.callHelp = function() {
+                // TODO:
+                console.log("help called");
+            }
+
+        }])
+    </script>
+</body>
+
+</html>
