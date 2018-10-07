@@ -1,1 +1,1 @@
-Run the index.html file to load the homepage
+Run the index.html file on the browser to load the homepage
