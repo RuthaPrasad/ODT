@@ -1,21 +1,33 @@
 
-function drawing_object(name , type, x , y , width , height){
-                      this.name = name;
-                      this.type = type;
-                      this.x = x;
-                      this.y = y;
-                      this.width = width;
-                      this.height = height;
-
-                    }
-
-
+function drawing_object(name , type, x , y , width , height)
+{
+  this.name = name;
+  this.type = type;
+  this.x = x;
+  this.y = y;
+  this.width = width;
+  this.height = height;
+}
 
 
+function line_structure(line, src, dest, x1, y1, x2, y2, id)
+{
+  this.line = line;
+  this.src = src;
+  this.dest = dest;
+  this.x1 = x1;
+  this.x2 = x2;
+  this.y1 = y1;
+  this.y2 = y2;
+  this.id = id;
+}
 
 
 var temp_table = new Array();
 var index = 0;
+
+var line_index = 0;
+var line_table = new Array();
 
 var old_coords_object = null;
 
@@ -28,8 +40,9 @@ function add_object(img, x, y)
   {
     var type = temp_table[new_index].type;
     temp_table[new_index] = new drawing_object(new_index, type, x, y, img.width, img.height);
-    // console.log(temp_table);
+    console.log(temp_table);
     console.log(temp_table[new_index]);
+    console.log("updated");
   }
   else
   {
@@ -41,6 +54,15 @@ function add_object(img, x, y)
 
   }
     return new_index;
+}
+
+function delete_object(img)
+{
+  id = img.id;
+  if(id.indexOf("canvas") == 0)
+  {
+
+  }
 }
 
 function draw_line(p1, p2)
@@ -62,6 +84,8 @@ function draw_line(p1, p2)
     y2 = Math.trunc(p1.top + p1.height / 2);
     x1 = Math.trunc(p2.left);
     y1 =  Math.trunc(p2.top + p1.height / 2);
+    [p1, p2] = [p2, p1];
+
 
   }
   console.log(p1.id);
@@ -71,12 +95,14 @@ function draw_line(p1, p2)
     fill: 'red',
     stroke: 'red',
     strokeWidth: 5,
-    selectable: false,
+    selectable: true,
     absolutePositioned: true,
     evented: false
   });
-  console.log('draw_line ' + line);
+  var new_index = "line_" + line_index.toString();
+  line_table[new_index] = new line_structure(line, p1, p2, x1, y1, x2, y2, new_index);
   canvas.add(line);
+  console.log(line_table[new_index])
 
 }
 
@@ -101,12 +127,8 @@ function update_features(target)
   var x = target.left;
   var y = target.top;
   add_object(target, x, y);
+  console.log("updated");
 }
-
-
-
-
-
 
 function initCanvas() {
     $('.canvas-container').each(function(index) {
@@ -185,7 +207,7 @@ function initCanvas() {
                 // onHover: handleOnClick
             });
             // newImage.on('mouseup', handleOnClick);
-            // newImage.onSelect = handleOnClick;
+            // newImage.onSelect = handleOnClick
             console.log(newImage.id)
             canvas.add(newImage);
             window.fabric.util.addListener(canvas.upperCanvasEl, 'dblclick', function(event, self)
@@ -205,15 +227,15 @@ function initCanvas() {
                 }
               }
             );
-            // window.fabric.util.addListener(canvas.upperCanvasEl, 'click', function(event, self)
-            //   {
-                  // event.preventDefault();
-            //     var target = canvas.findTarget(event);
-            //     console.log('single_click ' + target.id);
-            //     update_features(target);
-            //   }
-            //
-            // )
+            window.fabric.util.addListener(canvas.upperCanvasEl, 'click', function(event, self)
+              {
+                  event.preventDefault();
+                var target = canvas.findTarget(event);
+                console.log('single_click ' + target.id);
+                update_features(target);
+              }
+
+            )
             return false;
         }
 
@@ -234,6 +256,25 @@ function initCanvas() {
       canvasContainer.addEventListener('dragleave', handleDragLeave, false);
       canvasContainer.addEventListener('drop', handleDrop, false);
     });
+}
+
+function deleteObjects(){
+	var activeObject = canvas.getActiveObject(),
+    activeGroup = canvas.getActiveGroup();
+    if (activeObject) {
+        if (confirm('Are you sure?')) {
+            canvas.remove(activeObject);
+        }
+    }
+    else if (activeGroup) {
+        if (confirm('Are you sure?')) {
+            var objectsInGroup = activeGroup.getObjects();
+            canvas.discardActiveGroup();
+            objectsInGroup.forEach(function(object) {
+            canvas.remove(object);
+            });
+        }
+    }
 }
 
 initCanvas();
