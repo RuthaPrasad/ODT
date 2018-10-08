@@ -1,4 +1,4 @@
-angular.module("headerApp",[]).controller("ToolbarCtrl",[function() {
+angular.module("UIApp",[]).controller("ToolbarCtrl",[function() {
     var self = this;
     self.pencilDraw = function() {
         // TODO:
