@@ -1,0 +1,50 @@
+button.topnav, button.menunav {
+    color:white;
+    border:none;
+    display: inline-block;
+    padding:7px 8px;
+    transition: 0.1s;
+    background-color:black;
+}
+ul.menunav {
+    list-style-type: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:15%;
+    margin: 10;
+    padding: 0;
+    background-color:black;
+}
+ul.topnav{
+    list-style-type: none;
+    position: fixed;
+    top:0;
+    left:10%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+}
+button.topnav:hover,p:hover,button.menunav:hover {
+    background-color:grey;
+}
+ul.topnav li {
+    color:white;
+    margin-left:5.5%;
+    margin-left:5.5%;
+    float:left;
+}
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 7px 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size:100%;
+}
+ul.topnav li a:hover {
+    background-color:#33cc33;
+}

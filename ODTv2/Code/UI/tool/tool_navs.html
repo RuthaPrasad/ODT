@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="headerApp">
+
+<head>
+    <title>Logic Gates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="tool_navs.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="toolbarHeader"  ng-controller="ToolbarCtrl as t_ctrl">
+        <ul class="topnav" id="myTopnav">
+            <li><button type="button" title="Line" class="topnav" ng-click="t_ctrl.pencilDraw()"><i class="fa fa-pencil w3-large"></i></li>
+            <li><button type="button" title="Eraser" class="topnav" ng-click="t_ctrl.erase()"><i class="fa fa-eraser w3-large" aria-hidden="true" ></i></li>
+            <li><button type="button" title="Select" class="topnav" ng-click="t_ctrl.select()"><i class="fa fa-mouse-pointer w3-large"></i></li>
+            <li><button type="button" title="New" class="topnav" ng-click="t_ctrl.newObj()"><i class="fa fa-file-o w3-large"></i></li>
+            <li><button type="button" title="LineThickness" class="topnav" ng-click="t_ctrl.circleDraw()"><i class="fa fa-circle w3-large"></i></li>
+            <li><button type="button" title="LineColor" class="topnav" ng-click="t_ctrl.pickColor()"><input id="colorPicker" type="color"></li>
+            <li><button type="button" title="Text" class="topnav" ng-click="t_ctrl.resizeFont()"><i class="fa fa-font w3-large"></i></li>
+            <li><button type="button" class="topnav" title="Help" ng-click="t_ctrl.callHelp()"><i class="fa fa-question-circle-o w3-large"></i> Help</li>
+            <li><a class="topnav" href="../homepage/index.html" title="Sign Out"><i class="fa fa-power-off w3-large">Sign Out</i></a></li>
+        </ul>
+    </div>
+    <div class="menubarHeader" ng-controller="MenubarCtrl as m_ctrl">
+        <ul class="menunav">
+            <li><button type="button" class="menunav" ng-click="m_ctrl.newFile()"><i class="fa fa-plus-square w3-large">New</i></li>
+            <li><button type="button" class="menunav" ng-click="m_ctrl.openFile()"><i class="fa fa-folder-open w3-large">Open</i></li>
+            <li><button type="button" class="menunav" ng-click="m_ctrl.dupFile()"><i class="fa fa-files-o w3-large">Duplicate</i></li>
+            <li><button type="button" class="menunav" ng-click="m_ctrl.saveFile()"><i class="fa fa-save w3-large">Save</i></li>
+            <li><button type="button" class="menunav" ng-click="m_ctrl.saveAsFile()"><i class="fa fa-plus-square-o w3-large">Save As</i></li>
+        </ul>
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script src="tool_navs.js"></script>
+</body>
+
+</html>
