@@ -31,3 +31,10 @@
 	width: 500px;
 	height: 500px;
 }
+#del_button
+{
+  background-color: cyan;
+  top: 90%;
+  position: absolute;
+  padding: 1em;
+}
