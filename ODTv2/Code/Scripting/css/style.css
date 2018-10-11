@@ -10,7 +10,7 @@
 .furniture
 {
 	top: 10px;
-    background-color: DarkSlateGrey;
+  	background-color: DarkSlateGrey;
 	padding: 1em;
 	margin: 2px;
 	float: none;
@@ -22,6 +22,9 @@
 }
 .upper-canvas
 {
+	position: relative;
+	top: 200px;
+	left: 100px;
 	z-index: 0;
 	border: 2px solid;
 	width: auto;
