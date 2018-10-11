@@ -7,7 +7,7 @@
         .left-container a{
             color: rgb(233, 233, 233);
             text-align: center;
-        }   
+        }
         /* On small screens, set height to 'auto' for sidenav and grid */
         .left-container{
             float: left;
@@ -23,8 +23,7 @@
             flex: auto;
             background-color: rgb(43, 43, 43);
         }
-        .contain
-        {
+        .contain{
             position: fixed;
             width: 100%;
             min-height: 97%;
@@ -39,7 +38,7 @@
             color: rgb(203, 209, 214);
         }
         p{
-            color: rgb(233, 233, 233);   
+            color: rgb(233, 233, 233);
         }
         #Shapes{
             overflow: auto;
@@ -48,19 +47,19 @@
             padding: 1% 1%;
             display: inline-block;
         }
-        
+
         #Shapes img {
             max-width: 100px;
             max-height: 100px;
         }
-        
-        @media screen{   
+
+        @media screen{
             .column {
                 flex: inherit;
                 max-width: inherit;
               }
         }
-        
+
         .btn-group-vertical{
             width: 100%;
             height: auto;
@@ -69,5 +68,3 @@
             width:inherit;
             height: 100%;
         }
-        
-        

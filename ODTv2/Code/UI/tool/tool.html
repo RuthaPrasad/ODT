@@ -2,36 +2,33 @@
 <html lang="en">
 
 <head>
-
-    <title>Draw Domain</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="tool_navs.js"></script>
+    <script src="../UI/tool/tool_navs.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="containers.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.css'>
+    <link rel="stylesheet" href="../UI/tool/containers.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body onload="init()">
-
+<body>
     <div class="contain">
-
         <div class="left-container">
-            
             <ul class="nav nav-tabs">
                 <li><a data-toggle="tab" href="#Menu" title="File"><i class="fa fa-folder-open-o fa-lg"></i></a></li>
                 <li><a data-toggle="tab" href="#Shapes" title="Shapes"><i class="fa fa-sitemap fa-lg"></i></a></li>
                 <li><a data-toggle="tab" href="#Stack" title="Stack"><i class="fa fa-sliders fa-lg"></i></a></li>
                 <li><a data-toggle="tab" href="#Execute" title="Execute"><i class="fa fa-play fa-lg"></i></a></li>
             </ul>
-            
+
             <div class="tab-content">
-                
+
                 <div id="Menu" class="tab-pane fade">
                     <div class="btn-group-vertical">
                         <button type="button" class="btn btn-default" onclick="menu.newFile()"><i class="fa fa-plus-square fa-lg"></i><br>New</button>
@@ -39,40 +36,35 @@
                         <button type="button" class="btn btn-default" onclick="menu.dupFile()"><i class="fa fa-files-o fa-lg"></i><br>  Duplicate</button>
                         <button type="button" class="btn btn-default" onclick="menu.saveFile()"><i class="fa fa-save fa-lg"></i><br>    Save</button>
                         <button type="button" class="btn btn-default" onclick="menu.saveAsFile()"><i class="fa fa-plus-square-o fa-lg"></i><br> Save As</button>
-                    
+
                     </div>
                 </div>
-
                 <div id="Shapes" class="tab-pane fade">
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
-                        <div><img draggable="true" class="img-rounded" src="../images/NAND.png"></div>
+                    <div class="fullpage">
+                        <div class="section">
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/nand.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/and.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/or.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/xor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/nor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/xnor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/not.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/or.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/xor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/nor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/xnor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/not.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/nand.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/or.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/xor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/nor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/xnor.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/not.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/nand.png"></div>
+                            <div class="furniture"><img draggable="true" class="img-rounded" src="../UI/images/nand.png"></div>
+                        </div>
+                    </div>
                 </div>
-
                 <div id="Stack" class="tab-pane fade">
                     <p>Some content in menu 3.</p>
                 </div>
@@ -80,18 +72,16 @@
                 <div id="Execute" class="tab-pane fade">
                     <p>Some content in menu 4.</p>
                 </div>
-                
             </div>
         </div>
-        
         <div class="right-container">
             <div class="toolbar">
                 <div class="btn-group btn-group-justified">
                     <a href="#" class="btn btn-primary" title="Line" onclick="tool.pencilDraw()"><i class="fa fa-pencil fa-lg"></i> Pencil</a>
                     <a href="#" class="btn btn-primary" title="Eraser" onclick="tool.erase()"><i class="fa fa-eraser fa-lg" aria-hidden="true"></i>  Eraser</a>
-                    <a href="#" class="btn btn-primary" title="Select" onclick="tool.select()"><i class="fa fa-mouse-pointer fa-lg"></i>  Select</a>
+                    <a href="#" id="del_button" class="btn btn-primary" title="Delete" onclick="deleteObjects()"><i class="fa fa-trash fa-lg"></i>  Delete</a>
                     <a href="#" class="btn btn-primary" title="New" onclick="tool.newObj()"><i class="fa fa-file-o fa-lg"></i> New</a>
-                    <a href="#" class="btn btn-primary" title="LineThickness" onclick="tool.roundedDraw()"><i class="fa fa-rounded fa-lg"></i> rounded</a>
+                    <a href="#" class="btn btn-primary" title="LineThickness" onclick="tool.roundedDraw()"><i class="fa fa-circle fa-lg"></i> Rounded</a>
                     <a href="#" class="btn btn-primary" title="LineColor" onclick="tool.pickColor()"><input id="colorPicker" type="color"></i> Color</a>
                     <a href="#" class="btn btn-primary" title="Text" onclick="tool.resizeFont()"><i class="fa fa-font fa-lg"></i> Font Size</a>
                     <a href="#" class="btn btn-info" title="Help" onclick="tool.callHelp()"><i class="fa fa-question-rounded-o fa-lg"></i> Help</a>
@@ -99,34 +89,46 @@
                 </div>
             </div>
             <div class="canvas">
-                <p>Canvas</p>
-            </div>   
-        
-        </div>  
-    </div>
-    
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 id="modal-title" class="modal-title"></h4>
+                <div class="fullpage">
+                    <div class="section">
+                        <div class="canvas-container">
+                            <canvas></canvas>
+                        </div>
+                    </div>
                 </div>
-            <div id="modal-body" class="modal-body">
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.6/fabric.min.js'></script>
+    <script src="js/index.js"></script>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 id="modal-title" class="modal-title"></h4>
+                    </div>
+                <div id="modal-body" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                </div>
             </div>
-            </div>  
         </div>
-  </div>
-  
-          
-    <footer>
-        <div class="btn-group btn-group-justified">
-            <a href="#" class="btn btn-primary btn-xs" title="Signed into Online Drawing Tool" onclick="footer.showUserInfo()"><i class="fa fa-user-rounded fa-lg"></i> Username, SRN</a>
-            <a href="#" class="btn btn-primary btn-xs" title="Qustion Quick Preview" onclick="footer.showQuestion()"><i class="fa fa-question fa-lg" aria-hidden="true"></i> Question Preview</a>
-        </div>
-    </footer>
+
+
+        <footer>
+            <div class="btn-group btn-group-justified">
+                <a href="#" class="btn btn-primary btn-xs" title="Signed into Online Drawing Tool" onclick="footer.showUserInfo()"><i class="fa fa-user-rounded fa-lg"></i> Username, SRN</a>
+                <a href="#" class="btn btn-primary btn-xs" title="Qustion Quick Preview" onclick="footer.showQuestion()"><i class="fa fa-question fa-lg" aria-hidden="true"></i> Question Preview</a>
+            </div>
+        </footer>
+
 
 </body>
 
