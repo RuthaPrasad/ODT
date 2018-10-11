@@ -10,10 +10,10 @@
 .furniture
 {
 	top: 10px;
+    background-color: DarkSlateGrey;
 	padding: 1em;
 	margin: 2px;
 	float: none;
-	background-color: cyan;
 	width: 70px;
 	height: 70px;
 	align-items: center;
@@ -22,19 +22,12 @@
 }
 .upper-canvas
 {
-	position: relative;
-	top: 200px;
-	left: 100px;
-	float: right;
 	z-index: 0;
 	border: 2px solid;
-	width: 500px;
-	height: 500px;
+	width: auto;
+	height: auto;
 }
-#del_button
+.lower-canvas
 {
-  background-color: cyan;
-  top: 90%;
-  position: absolute;
-  padding: 1em;
+    background-color: white;
 }
