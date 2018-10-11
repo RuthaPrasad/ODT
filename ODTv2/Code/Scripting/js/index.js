@@ -138,8 +138,8 @@ function initCanvas() {
         var url = $(this).data('floorplan');
         canvas = window._canvas = new fabric.Canvas(canvasObject);
         console.log(canvas);
-        canvas.setHeight(500);
-        canvas.setWidth(500);
+        canvas.setHeight(1000);
+        canvas.setWidth(1100);
         // canvas.css({'z-index' : -1, });
         // console.log('url : ' + url)
         // canvas.setBackgroundImage('js/download.jpg', canvas.renderAll.bind(canvas));
