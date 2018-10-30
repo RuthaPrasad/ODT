@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<style type="text/css">
+		.dropbtn {
+		    margin: auto;
+		    padding: 12px;
+		    width: 30%;
+		    height: 10%;
+		    font-size: 100%;
+		    text-align: center;
+		    background-color: #b1cbbb;
+		    margin-top: 50%;
+		}
+
+
+		.dropdown {
+		    margin: auto;
+		    width: 50%;
+		    height: 50%;
+		    margin-top: 40%;
+		    display: block;
+		}
+
+		.dropdown-content {
+		    margin: auto;
+		    display: none;
+		    background-color: #f1f1f1;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		}
+
+		.dropdown-content a {
+		    margin: auto;
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		    text-align: center;
+		}
+
+		.dropdown-content a:hover {background-color: #ddd;}
+
+		.dropdown:hover .dropdown-content {display: block;}
+
+		.dropdown:hover .dropbtn {background-color: #b1cbbb;}		
+	</style>
+	<script type="text/javascript">
+		function init()
+		{
+			var fsm = document.getElementById("fsm");
+			var lgc = document.getElementById("lgc");
+			// fsm.href = "localhost:5000/tool/drawing_tool/fsm";
+			// lgc.href = "localhost:5000/tool/drawing_tool/lgc";
+			fsm.onclick = tool_init;
+			lgc.onclick = tool_init;
+		}
+
+		function tool_init(e)
+		{
+			console.log(e.target.innerHTML);
+			// xhr = new XMLHttpRequest();
+			// // xhr.onreadystatechange = get_new_page();
+			// xhr.open("GET", "/tool/drawing_tool?domain="+e.target.innerHTML , true);
+			// xhr.send();
+			var link = "http://localhost:5000/tool/drawing_tool/" + e.target.innerHTML;
+			// var link = "http://localhost:5000/tool/drawing_tool/fsm";
+			// var link = "http://www.google.com"
+			document.location.href = link;
+
+		}
+
+	</script>
+
+</head>
+<body onload="init()">
+	<div class="dropdown">
+		<div class = "dropbtn" id = "something">Domain</div>
+		<div class="dropdown-content">
+			<a id = "fsm">Finite State Machines</a>
+			<a id = "lgc">Logical Circuits</a>
+		</div>
+	</div>
+</body>
+</html>
